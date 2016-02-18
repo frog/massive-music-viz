@@ -1,0 +1,180 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	touch-action: none;
+	-webkit-tap-highlight-color: transparent;	
+	background-color: #000000;
+	color: #FFFFFF;
+	display: flex;
+	overflow: hidden;
+}
+
+main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	&.fullscreen {
+		cursor: none;
+	}
+	
+	section {
+		position: relative;
+		width: 100vw;
+		height: 33.333vh;
+		overflow: hidden;
+		
+		&.solo {
+			width: 100vw;
+			height: 100vh;
+		}
+		
+		&.mute {
+			display: none;
+		}
+		
+		svg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		&#high {
+			svg {
+				&.base {
+					rect {
+						&:nth-child(1) { fill: #F5E802; }
+						&:nth-child(2) { fill: #27AEDE; }
+					}
+				}
+				&.overlay {
+					polygon {
+						&:nth-child(1) { fill: #0CCCF6; }
+						&:nth-child(2) { fill: #FF9C02; }
+					}
+				}
+				&.tempo.outer {
+					rect {
+						&:nth-child(1) { fill: #27AEDE; }
+						&:nth-child(2) { fill: #FF9C02; }
+					}
+				}
+				&.tempo.inner {
+					polygon {
+						&:nth-child(1) { fill: #FFAF33; }
+						&:nth-child(2) { fill: #0CCCF6; }
+					}
+				}
+				&.level {
+					polygon {
+						&:nth-child(1) { stroke: #48BE0A; fill: transparent; }
+						&:nth-child(2) { stroke: #7B4DC8; fill: transparent; }
+					}
+				}
+				&.peak {
+					polygon {
+						&:nth-child(1) { stroke: #7B4DC8; fill: transparent; }
+						&:nth-child(2) { stroke: #48BE0A; fill: transparent; }
+					}
+				}
+			}
+		}
+		
+		&#mid {
+			svg {
+				&.base {
+					rect {
+						&:nth-child(1) { fill: #3DA108; }
+						&:nth-child(2) { fill: #201F7F; }
+					}
+				}
+				&.overlay {
+					circle {
+						&:nth-child(1) { fill: #48BE0A; }
+						&:nth-child(2) { fill: #27269B; }
+					}
+				}
+				&.tempo.outer {
+					rect {
+						&:nth-child(1) { fill: #201F7F; }
+						&:nth-child(2) { fill: #3DA108; }
+					}
+				}
+				&.tempo.inner {
+					circle {
+						&:nth-child(1) { fill: #27269B; }
+						&:nth-child(2) { fill: #48BE0A; }
+					}
+				}
+				&.level {
+					circle {
+						&:nth-child(1) { fill: #F5E802; }
+						&:nth-child(2) { fill: #0CCCF6; }
+						&:nth-child(3) { fill: #201F7F; }
+						&:nth-child(4) { fill: #DD0284; }
+					}
+				}
+				&.peak {
+					circle {
+						&:nth-child(1) { fill: #27AEDE; }
+						&:nth-child(2) { fill: #F5E802; }
+						&:nth-child(3) { fill: #DD0284; }
+						&:nth-child(4) { fill: #1B1A7F; }
+					}
+				}
+			}
+		}
+		
+		&#low {
+			svg {
+				&.base {
+					rect {
+						&:nth-child(1) { fill: #F36D02; }
+						&:nth-child(2) { fill: #DD0284; }
+					}
+				}
+				&.overlay {
+					rect {
+						&:nth-child(1) { fill: #F38731; }
+						&:nth-child(2) { fill: #DD3197; }
+					}
+				}
+				&.tempo.outer {
+					rect {
+						&:nth-child(1) { fill: #F5E802; }
+						&:nth-child(2) { fill: #F36D02; }
+					}
+				}
+				&.tempo.inner {
+					rect {
+						&:nth-child(1) { fill: #F4ED7D; }
+						&:nth-child(2) { fill: #FF9C02; }
+					}
+				}
+				&.level {
+					rect {
+						&:nth-child(1) { fill: #DD0284; }
+						&:nth-child(2) { fill: #F5E802; }
+						&:nth-child(3) { fill: #F36D02; }
+						&:nth-child(4) { fill: #F38731; }
+					}
+				}
+				&.peak {
+					rect {
+						&:nth-child(1) { fill: #F36D02; }
+						&:nth-child(2) { fill: #DD0284; }
+						&:nth-child(3) { fill: #F5E802; }
+						&:nth-child(4) { fill: #F36D02; }
+					}
+				}
+			}
+		}
+	}
+}

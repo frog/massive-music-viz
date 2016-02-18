@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>frog - Massive Music Viz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="/_/css/client.css" rel="stylesheet" media="all">
+	<script src="/_/js/lib/bower_components/headjs/dist/1.0.0/head.load.min.js"></script>
+</head>
+<body>
+	<main touch-action="none">
+		<section id="high">
+			<svg class="base" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="overlay" viewbox="0 0 640 360">
+				<polygon points="0,360 320,-190 640,360"></polygon>
+				<polygon points="104,180 320,-190 536,180"></polygon>
+			</svg>
+			<svg class="tempo outer" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="tempo inner" viewbox="0 0 640 360">
+				<polygon points="0,360 320,-190 640,360"></polygon>
+				<polygon points="104,180 320,-190 536,180"></polygon>
+			</svg>
+			<svg class="level" viewbox="0 0 640 360">
+				<polygon points="269,225 320,137 371,225" stroke-width="24" clip-path="url(#clip-high-level-top)"></polygon>
+				<polygon points="269,225 320,137 371,225" stroke-width="24" clip-path="url(#clip-high-level-bottom)"></polygon>
+				<defs>
+					<clipPath id="clip-high-level-top"><rect x="0" y="0" width="640" height="180"></rect></clipPath>
+					<clipPath id="clip-high-level-bottom"><rect x="0" y="180" width="640" height="180"></rect></clipPath>
+				</defs>
+			</svg>
+		</section>
+		<section id="mid">
+			<svg class="base" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="overlay" viewbox="0 0 640 360">
+				<circle cx="320" cy="180" r="212" clip-path="url(#clip-mid-overlay-top)"></circle>
+				<circle cx="320" cy="180" r="212" clip-path="url(#clip-mid-overlay-bottom)"></circle>
+				<defs>
+					<clipPath id="clip-mid-overlay-top"><rect x="0" y="-32" width="640" height="212"></rect></clipPath>
+					<clipPath id="clip-mid-overlay-bottom"><rect x="0" y="180" width="640" height="212"></rect></clipPath>
+				</defs>
+			</svg>
+			<svg class="tempo outer" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="tempo inner" viewbox="0 0 640 360">
+				<circle cx="320" cy="180" r="212" clip-path="url(#clip-mid-tempo-top)"></circle>
+				<circle cx="320" cy="180" r="212" clip-path="url(#clip-mid-tempo-bottom)"></circle>
+				<defs>
+					<clipPath id="clip-mid-tempo-top"><rect x="0" y="-32" width="640" height="212"></rect></clipPath>
+					<clipPath id="clip-mid-tempo-bottom"><rect x="0" y="180" width="640" height="212"></rect></clipPath>
+				</defs>
+			</svg>
+			<svg class="level" viewbox="0 0 640 360">
+				<circle cx="320" cy="180" r="71" clip-path="url(#clip-mid-level-top-outer)"></circle>
+				<circle cx="320" cy="180" r="71" clip-path="url(#clip-mid-level-bottom-outer)"></circle>
+				<circle cx="320" cy="180" r="35" clip-path="url(#clip-mid-level-top-inner)"></circle>
+				<circle cx="320" cy="180" r="35" clip-path="url(#clip-mid-level-bottom-inner)"></circle>
+				<defs>
+					<clipPath id="clip-mid-level-top-outer"><rect x="0" y="109" width="640" height="71"></rect></clipPath>
+					<clipPath id="clip-mid-level-bottom-outer"><rect x="0" y="180" width="640" height="71"></rect></clipPath>
+					<clipPath id="clip-mid-level-top-inner"><rect x="0" y="145" width="640" height="35"></rect></clipPath>
+					<clipPath id="clip-mid-level-bottom-inner"><rect x="0" y="180" width="640" height="35"></rect></clipPath>
+				</defs>
+			</svg>
+		</section>
+		<section id="low">
+			<svg class="base" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="overlay" viewbox="0 0 640 360" >
+				<rect width="412" height="180" x="114" y="0"></rect>
+				<rect width="412" height="180" x="114" y="180"></rect>
+			</svg>
+			<svg class="tempo outer" viewbox="0 0 640 360" preserveAspectRatio="none">
+				<rect width="640" height="180" x="0" y="0"></rect>
+				<rect width="640" height="180" x="0" y="180"></rect>
+			</svg>
+			<svg class="tempo inner" viewbox="0 0 640 360">
+				<rect width="412" height="180" x="114" y="0"></rect>
+				<rect width="412" height="180" x="114" y="180"></rect>
+			</svg>
+			<svg class="level" viewbox="0 0 640 360">
+				<rect width="126" height="63" x="257" y="117"></rect>
+				<rect width="126" height="63" x="257" y="180"></rect>
+				<rect width="60" height="30" x="290" y="150"></rect>
+				<rect width="60" height="30" x="290" y="180"></rect>
+			</svg>
+		</section>
+	</main>
+	<script>
+		head.js
+		(
+			"/_/js/lib/bower_components/jquery/dist/jquery.min.js",
+			"/_/js/lib/bower_components/pepjs/dist/pep.min.js",
+			"/_/js/lib/bower_components/velocity/velocity.min.js",
+			"/_/js/client.js",
+			function () { client.init(); }
+		);
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"name": "frog-massive-music-viz",
+	"version": "1.0.0",
+	"private": true,
+	"repository": "https://github.com/frog/massive-music-viz",
+	"engines": {
+		"node": ">= 5.0.0"
+	},
+	"author": "Robert Tuttle (frog)",
+	"license": "MIT",
+	"devDependencies": {
+		"osc": ">=2.0.3",
+		"ws": ">=1.0.1"
+	}
+}

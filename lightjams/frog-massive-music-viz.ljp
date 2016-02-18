@@ -1,0 +1,330 @@
+<console>
+  <model>
+    <version>2.0</version>
+    <registrar>
+      <universes universeIdVersion="1" />
+      <templates />
+    </registrar>
+    <sounds />
+    <oscIn>
+      <mappings>
+        <mapping2>
+          <address>/2/push1</address>
+          <channel>0</channel>
+          <min>0</min>
+          <max>1</max>
+          <nbValues>1</nbValues>
+        </mapping2>
+        <mapping2>
+          <address>/2/push2</address>
+          <channel>1</channel>
+          <min>0</min>
+          <max>1</max>
+          <nbValues>1</nbValues>
+        </mapping2>
+        <mapping2>
+          <address>/1/fader1</address>
+          <channel>2</channel>
+          <min>0</min>
+          <max>1</max>
+          <nbValues>1</nbValues>
+        </mapping2>
+      </mappings>
+    </oscIn>
+    <oscOut>
+      <extraOutputs>
+        <output>
+          <channel>0</channel>
+          <address>/lj/mp/goto</address>
+        </output>
+        <output>
+          <channel>1</channel>
+          <address>/lj/mp/pause</address>
+        </output>
+        <output>
+          <channel>2</channel>
+          <address>/lj/mp/volume</address>
+        </output>
+        <output>
+          <channel>4</channel>
+          <address>/lj/4/fader1</address>
+        </output>
+      </extraOutputs>
+    </oscOut>
+    <globalFormulas>
+      <speed>
+        <expression>0</expression>
+        <actAsVariable>True</actAsVariable>
+        <value>20</value>
+        <inputMode>0</inputMode>
+        <data>
+          <formulaExpression>
+          </formulaExpression>
+        </data>
+      </speed>
+      <intensity>
+        <expression>0</expression>
+        <actAsVariable>True</actAsVariable>
+        <value>100</value>
+        <inputMode>0</inputMode>
+        <data>
+          <formulaExpression>
+          </formulaExpression>
+        </data>
+      </intensity>
+    </globalFormulas>
+    <grids>
+      <nbGrids>1</nbGrids>
+      <root>
+        <name>root</name>
+        <activableID>
+        </activableID>
+        <activationFormula>
+          <expression>
+          </expression>
+          <actAsVariable>True</actAsVariable>
+          <value>100</value>
+          <inputMode>0</inputMode>
+          <data />
+        </activationFormula>
+        <timeMultiplierFormula>
+          <expression>
+          </expression>
+          <actAsVariable>True</actAsVariable>
+          <value>20</value>
+          <inputMode>0</inputMode>
+          <data />
+        </timeMultiplierFormula>
+        <grids>
+          <grid>
+            <ID>a8f4a909-8e48-43e3-878c-cc9e22071a06</ID>
+            <name>fx01</name>
+            <width>25</width>
+            <height>20</height>
+            <priority>0</priority>
+            <activableID>
+            </activableID>
+            <fadeInMode>0</fadeInMode>
+            <fadeOutMode>0</fadeOutMode>
+            <fadeInDelay>0.4</fadeInDelay>
+            <fadeOutDelay>0.4</fadeOutDelay>
+            <activationFormula>
+              <expression>
+              </expression>
+              <actAsVariable>True</actAsVariable>
+              <value>100</value>
+              <inputMode>0</inputMode>
+              <data />
+            </activationFormula>
+            <timeMultiplierFormula>
+              <expression>
+              </expression>
+              <actAsVariable>True</actAsVariable>
+              <value>20</value>
+              <inputMode>0</inputMode>
+              <data />
+            </timeMultiplierFormula>
+            <emitters>
+              <emitter>
+                <direction>255</direction>
+                <x>12</x>
+                <y>10</y>
+                <color>0</color>
+                <shaderMode>False</shaderMode>
+                <delaySpeedMultX>1</delaySpeedMultX>
+                <delaySpeedMultY>1</delaySpeedMultY>
+                <delaySpeedProfile>0</delaySpeedProfile>
+                <formulas>
+                  <formula>
+                    <name>internalEmitter</name>
+                    <expression>osc.send(3, round(music.1.low.beat), round(music.1.mid.beat), round(music.1.hi.beat), restrain(round(smooth(3, bpmCounter(trigger(music.1.low.beat, 0.1, 10, 15, 0.2)))), 60, 180), trigger(time.second % 15 == 0, 0.02, 100, 100, 5))</expression>
+                    <actAsVariable>False</actAsVariable>
+                    <value>0</value>
+                    <inputMode>4</inputMode>
+                    <data>
+                      <formulaExpression>osc.send(3, round(music.1.low.beat), round(music.1.mid.beat), round(music.1.hi.beat), restrain(round(smooth(3, bpmCounter(trigger(music.1.low.beat, 0.1, 10, 15, 0.2)))), 60, 180), trigger(time.second % 15 == 0, 0.02, 100, 100, 5))</formulaExpression>
+                    </data>
+                  </formula>
+                  <formula>
+                    <name>emitterconservationratio</name>
+                    <expression>
+                    </expression>
+                    <actAsVariable>True</actAsVariable>
+                    <value>0</value>
+                    <inputMode>0</inputMode>
+                    <data />
+                  </formula>
+                  <formula>
+                    <name>emitterspeed</name>
+                    <expression>
+                    </expression>
+                    <actAsVariable>True</actAsVariable>
+                    <value>0</value>
+                    <inputMode>0</inputMode>
+                    <data />
+                  </formula>
+                  <formula>
+                    <name>positionX</name>
+                    <expression>
+                    </expression>
+                    <actAsVariable>True</actAsVariable>
+                    <value>50</value>
+                    <inputMode>0</inputMode>
+                    <data />
+                  </formula>
+                  <formula>
+                    <name>positionY</name>
+                    <expression>
+                    </expression>
+                    <actAsVariable>True</actAsVariable>
+                    <value>52.6315789473684</value>
+                    <inputMode>0</inputMode>
+                    <data />
+                  </formula>
+                </formulas>
+              </emitter>
+            </emitters>
+            <receptors />
+          </grid>
+        </grids>
+        <groups />
+      </root>
+    </grids>
+    <medias>
+      <slots />
+    </medias>
+    <colorPalette>
+      <items>
+        <item id="scene01 primary" name="scene01 primary">
+          <colors>
+            <color h="0" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene01 secondary" name="scene01 secondary">
+          <colors>
+            <color h="20" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene01 tertiary" name="scene01 tertiary">
+          <colors>
+            <color h="40" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene01 gradient" name="scene01 gradient">
+          <colors>
+            <color h="0" s="1" l="0.5" />
+            <color h="40" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene02 primary" name="scene02 primary">
+          <colors>
+            <color h="60" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene02 secondary" name="scene02 secondary">
+          <colors>
+            <color h="80" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene02 tertiary" name="scene02 tertiary">
+          <colors>
+            <color h="100" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene02 gradient" name="scene02 gradient">
+          <colors>
+            <color h="60" s="1" l="0.5" />
+            <color h="100" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene03 primary" name="scene03 primary">
+          <colors>
+            <color h="120" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene03 secondary" name="scene03 secondary">
+          <colors>
+            <color h="140" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene03 tertiary" name="scene03 tertiary">
+          <colors>
+            <color h="160" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene03 gradient" name="scene03 gradient">
+          <colors>
+            <color h="120" s="1" l="0.5" />
+            <color h="160" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene04 primary" name="scene04 primary">
+          <colors>
+            <color h="180" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene04 secondary" name="scene04 secondary">
+          <colors>
+            <color h="200" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene04 tertiary" name="scene04 tertiary">
+          <colors>
+            <color h="220" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene04 gradient" name="scene04 gradient">
+          <colors>
+            <color h="180" s="1" l="0.5" />
+            <color h="220" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene05 primary" name="scene05 primary">
+          <colors>
+            <color h="240" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene05 secondary" name="scene05 secondary">
+          <colors>
+            <color h="260" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene05 tertiary" name="scene05 tertiary">
+          <colors>
+            <color h="280" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene05 gradient" name="scene05 gradient">
+          <colors>
+            <color h="240" s="1" l="0.5" />
+            <color h="280" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene06 primary" name="scene06 primary">
+          <colors>
+            <color h="300" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene06 secondary" name="scene06 secondary">
+          <colors>
+            <color h="320" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene06 tertiary" name="scene06 tertiary">
+          <colors>
+            <color h="340" s="1" l="0.5" />
+          </colors>
+        </item>
+        <item id="scene06 gradient" name="scene06 gradient">
+          <colors>
+            <color h="300" s="1" l="0.5" />
+            <color h="340" s="1" l="0.5" />
+          </colors>
+        </item>
+      </items>
+    </colorPalette>
+  </model>
+  <view>
+    <selectedGridId>a8f4a909-8e48-43e3-878c-cc9e22071a06</selectedGridId>
+  </view>
+</console>

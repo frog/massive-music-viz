@@ -1,0 +1,9 @@
+{
+	"name": "frog-massive-music-viz",
+	"dependencies": {
+		"headjs": ">=1.0.3",
+		"jquery": ">=2.2.0",
+		"pepjs": ">=0.4.1",
+		"velocity": ">=1.2.3"
+	}
+}
