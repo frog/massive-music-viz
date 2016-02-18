@@ -49,14 +49,7 @@ client.init = function ()
 	
 	client.startTempo();
 	
-	if (client.isSimulationEnabled)
-	{
-		client.runSimulation();
-	}
-	else
-	{
-		client.connectWebSocket();
-	}
+	client.connectWebSocket();
 };
 
 client.connectWebSocket = function()
