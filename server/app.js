@@ -62,11 +62,12 @@ module.exports.init = function(httpServer)
 	wss = new WebSocketServer({ server: httpServer });
 	wss.broadcast = function broadcast(data) 
 	{
+		var message = JSON.stringify(data);
 		for (var i = 0, ic = wss.clients.length; i < ic; i += 1)
 		{
 			try 
 			{
-				wss.clients[i].send(JSON.stringify(data));
+				wss.clients[i].send(message);
 			} catch (e) { }
 		}
 	};
