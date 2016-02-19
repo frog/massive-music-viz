@@ -4,7 +4,7 @@ Real-time music visualization synchronized across mobile and desktop devices on 
 
 ## Background
 
-As one of several experiences designed and developed for an open house party hosted by frog in the Austin studio around SXSW 2016, this real-time music visualization piece combines live audio processing (spectrum analysis and beat detection), OSC (Open Sound Control) data broadcast over HTML5 WebSockets, and responsive SVG layout and animations to synchronize a large array of connected browser clients across desktop displays staged throughout the party space along with the mobile devices of partygoers. With capable Wi-Fi networking hardware (a single Netgear R7000 + DD-WRT) to create a high performance local network, around 200 connected devices can be supported and synchronized to visualize live music in tandem. The design matches the visual and interaction theme for the open house party with visualizations developed for the low (bass), mid (average), and high (treble) aggregate ranges of the processed spectrum along with a background cycle matched to the current beats per minute detected in the music.
+As one of several experiences designed and developed for an open house party hosted by frog in the Austin studio around SXSW 2016, this real-time music visualization piece combines live audio processing (spectrum analysis and beat detection), OSC (Open Sound Control) data broadcast over HTML5 WebSockets, and responsive SVG layout and animations to synchronize a large array of connected browser clients across desktop displays staged throughout the party space along with the mobile devices of partygoers. With capable Wi-Fi networking hardware (a single Netgear R7000 + DD-WRT) to create a high performance local network, around 200 connected devices can be supported and synchronized to visualize live music in tandem. The design matches the visual and interaction theme for the open house party with animations developed for the low (bass), mid (average), and high (treble) aggregate ranges of the processed spectrum along with a background cycle matched to the current beats per minute detected in the music.
 
 ## Dependencies
 
@@ -29,7 +29,7 @@ As one of several experiences designed and developed for an open house party hos
 
 ## Usage
 
-* Launch one or more web browsers (desktop or mobile) to the available IP address endpoints logged in the console (localhost and/or local LAN assigned)
+* Launch one or more web browsers (desktop and/or mobile) to one of the available IP address endpoints logged in the console (localhost and/or local LAN assigned). Local firewall configuration may be required to allow inbound web traffic.
 * All three data visualizations are displayed by default when loading the page
 * Tap or click one of the visualizations to focus
 * Tap or click to return to default view
