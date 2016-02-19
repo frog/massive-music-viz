@@ -88,7 +88,6 @@ client.processMessage = function(data)
 	
 	if (data[4] == 1)
 	{
-		$(".tempo").velocity("stop");
 		client.startTempo();
 	}
 };
@@ -97,6 +96,7 @@ client.startTempo = function()
 {
 	var duration = (60000 / client.bpm) * 2;
 	$(".tempo")
+		.velocity("stop")
 		.velocity({ scale: [0 ,0] }, { duration: duration * .45, easing: "linear", complete: function(e) { $(".overlay").css("opacity", 0); } })
 		.velocity({ scale: [1, 0] }, { duration: duration * .15, easing: "linear" })
 		.velocity({ scale: [1, 1] }, { duration: duration * .40, easing: "linear", complete: function(e) { $(".overlay").css("opacity", 1); client.startTempo(); } });
