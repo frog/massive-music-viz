@@ -8,7 +8,7 @@
 	},
 	"author": "Robert Tuttle (frog)",
 	"license": "MIT",
-	"devDependencies": {
+	"dependencies": {
 		"osc": ">=2.0.3",
 		"ws": ">=1.0.1"
 	}
